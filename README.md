@@ -1,8 +1,13 @@
 # random-utilities
 
-## Show the branch on your Git folders
+## Show the branch on your Git folders (Mac OS)
 
-Add this snippet to ~/.zsh_profile (only works on Mac OS X Catalina and newer)
+### Requirements
+Source code pro + Font awesome font: https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
+
+### Steps:
+1. Install font
+2. Add this snippet to ~/.zsh_profile (only works on Mac OS X Catalina and newer)
 
 ```
 function get_git_branch() {
@@ -13,10 +18,9 @@ get_sha() {
     git rev-parse --short HEAD 2>/dev/null
 }
 
-COLOR_DEF=$'\e[0m'
-COLOR_USR=$'\e[38;5;243m'
-COLOR_DIR=$'\e[38;5;197m'
-COLOR_GIT=$'\e[38;5;39m'
+GIT_ICON=$'\UE822'
+TRIANGLE=$'\UE0B0'
+
 setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(get_git_branch)${COLOR_DEF} ${COLOR_GIT}($(get_sha))${COLOR_DEF} $ '
+export PROMPT='%K{#18C7FF}%F{black}%~%f %K{#17DC38}%F{black} ${GIT_ICON}$(get_git_branch)%f%F{black}($(get_sha))%f %k%F{#17DC38}${TRIANGLE}%f '
 ```
