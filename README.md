@@ -8,8 +8,9 @@
 Source code pro + Font awesome font: https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
 
 ### Steps:
-1. Install Source code pro font
-2. Add this snippet to ~/.zsh_profile or ~/.zshrc (it only works on Mac OS X Catalina and newer)
+1. Install ```Source code pro``` font
+2. Change iTerm font and use ```Source code pro```
+3. Add this snippet to ~/.zsh_profile or ~/.zshrc (it only works on Mac OS X Catalina and newer)
 
 ```
 function get_git_branch() {
